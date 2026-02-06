@@ -1,6 +1,10 @@
+"use client";
+
 import { Play } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter()
   return (
     <footer className="bg-black text-white pt-24 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +18,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-8">Let your business go online</p>
 
             <div className="flex space-x-4">
-              <button className="h-12 px-8 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors">
+              <button onClick={() => router.push("/contactUs")} className="h-12 px-8 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors">
                 Get Started
               </button>
               <button className="h-12 px-8 border border-white/20 rounded-full font-semibold hover:bg-white/10 transition-colors">

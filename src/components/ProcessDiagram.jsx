@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ProcessDiagram() {
   return (
@@ -23,8 +24,15 @@ export default function ProcessDiagram() {
               viewport={{ once: true }}
               className="hidden md:flex justify-center translate-y-10"
             >
-              <div className="bg-[#2D5F5D] rounded-[2.5rem] p-4 h-[380px] w-[240px] shadow-2xl rotate-[-5deg]">
-                <div className="w-full h-full border-2 border-white/20 rounded-[2rem]" />
+              <div className="relative h-[380px] w-[240px] rounded-[2.5rem] border-2 border-black shadow-2xl rotate-[-5deg] overflow-hidden bg-white">
+                <Image
+                  src="/mobileImage1.jpeg"
+                  alt="Mobile UI"
+                  fill
+                  className="object-cover"
+                  sizes="240px"
+                  priority
+                />
               </div>
             </motion.div>
 
@@ -41,10 +49,18 @@ export default function ProcessDiagram() {
                 Approach
               </h3>
 
-              <div className="bg-[#2D5F5D] rounded-[3rem] p-6 h-[460px] w-[260px] sm:h-[500px] sm:w-[280px] shadow-2xl border-8 border-black relative">
-                <div className="w-full h-full rounded-[2rem] flex items-center justify-center">
-                  <div className="w-16 h-1 bg-white/20 rounded-full absolute top-10" />
-                </div>
+              <div className="relative h-[460px] w-[260px] sm:h-[500px] sm:w-[280px] rounded-[3rem] border-4 border-black shadow-2xl overflow-hidden bg-white">
+                <Image
+                  src="/mobileImage2.jpeg"
+                  alt="App Screen"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 260px, 280px"
+                  priority
+                />
+
+                {/* Speaker notch */}
+                <div className="w-16 h-1 bg-black/30 rounded-full absolute top-4 left-1/2 -translate-x-1/2 z-10" />
               </div>
             </motion.div>
 
@@ -55,8 +71,15 @@ export default function ProcessDiagram() {
               viewport={{ once: true }}
               className="hidden md:flex justify-center translate-y-10"
             >
-              <div className="bg-[#2D5F5D] rounded-[2.5rem] p-4 h-[380px] w-[240px] shadow-2xl rotate-[5deg]">
-                <div className="w-full h-full border-2 border-white/20 rounded-[2rem]" />
+              <div className="relative h-[380px] w-[240px] rounded-[2.5rem] border-2 border-black shadow-2xl rotate-[5deg] overflow-hidden bg-white">
+                <Image
+                  src="/mobileImage3.jpeg"
+                  alt="App Preview"
+                  fill
+                  className="object-cover"
+                  sizes="240px"
+                  priority
+                />
               </div>
             </motion.div>
           </div>

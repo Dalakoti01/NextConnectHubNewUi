@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -97,13 +98,16 @@ export default function Hero() {
               <div className="h-[64px] w-[3px] bg-gray-800 absolute -right-[16px] top-[142px] rounded-r-lg" />
 
               {/* Screen */}
-              <div className="rounded-[2rem] overflow-hidden w-[236px] sm:w-[272px] h-[496px] sm:h-[572px] bg-white">
-                <img
-                  src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Mobile App Interface"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="relative rounded-[2rem] overflow-hidden w-[236px] sm:w-[272px] h-[496px] sm:h-[572px] bg-white">
+  <Image
+    src="/heroMobile.png"
+    alt="Mobile App Interface"
+    fill
+    className="object-cover"
+    sizes="(max-width: 640px) 236px, 272px"
+    priority
+  />
+</div>
             </div>
           </motion.div>
         </div>

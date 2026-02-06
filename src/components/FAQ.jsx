@@ -3,42 +3,51 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const faqs = [
   {
-    question: "How does Saber's pricing work?",
+    question: "What services do you offer in web development?",
     answer:
-      "Saber's pricing is based on the number of agents, monthly tasks, and feature access. You can start free with the Starter plan, and upgrade anytime as your needs grow.",
+      "We provide end-to-end web development services including custom websites, scalable web applications, Next.js and MERN stack development, WordPress solutions, API integrations, and AI-powered features designed for performance and long-term growth.",
   },
   {
-    question: "What counts as a 'task'?",
+    question: "Which technologies do you specialize in?",
     answer:
-      "A task is defined as any single operation performed by our agents, such as responding to a ticket, processing an order, or updating a record.",
+      "Our core expertise includes Next.js, React, Node.js, MongoDB, WordPress, Tailwind CSS, REST & GraphQL APIs, cloud deployments, and AI/ML integrations, ensuring modern, fast, and secure applications.",
   },
   {
-    question: "Can I upgrade or downgrade my plan anytime?",
+    question: "Do you build SEO-friendly websites?",
     answer:
-      "Yes, you can change your plan at any time. Changes will be reflected in your next billing cycle.",
+      "Yes. All our websites are built with SEO best practices such as clean code, fast loading speed, mobile responsiveness, structured data, and optimized metadata to help improve search engine rankings.",
   },
   {
-    question: "What happens if I exceed my monthly task limit?",
+    question: "Can you integrate AI features into existing websites or apps?",
     answer:
-      "If you exceed your limit, we'll notify you. You can either upgrade your plan or pay for additional tasks at a standard rate.",
+      "Absolutely. We integrate AI chatbots, smart search, automation tools, recommendation systems, and third-party AI APIs into both new and existing websites without disrupting current functionality.",
   },
   {
-    question: "Is there a free trial for Pro or Enterprise plans?",
+    question: "Do you offer custom AI chatbot development?",
     answer:
-      "Yes, we offer a 14-day free trial for our Pro plan. Contact our sales team for Enterprise trials.",
+      "Yes. We design custom AI chatbots tailored to your business needs, including customer support bots, lead generation bots, booking assistants, and internal workflow automation.",
   },
   {
-    question: "Do I need a credit card to get started?",
+    question: "Why should I choose Next.js or MERN stack for my project?",
     answer:
-      "No, you can get started with our free tier without a credit card. Payment info is only needed when you upgrade.",
+      "Next.js offers high performance, SEO advantages, and server-side rendering, while the MERN stack provides flexibility and scalability for complex applications. We help you choose the right stack based on your business goals.",
   },
+  {
+    question : "Do you provide website maintenance and ongoing support?",
+    answer :
+      "Yes, we offer comprehensive maintenance packages including regular updates, security monitoring, performance optimization, backups, and technical support to ensure your website or app runs smoothly.",
+  }
 ];
+
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
+  const router = useRouter()
+
 
   return (
     <section className="py-20 sm:py-24 bg-white">
@@ -114,7 +123,7 @@ export default function FAQ() {
             </p>
           </div>
 
-          <button className="px-8 py-3 bg-white border border-gray-200 rounded-full font-semibold text-black hover:bg-black hover:text-white transition-all duration-300 shadow-sm">
+          <button onClick={() => router.push("/contactUs")} className="px-8 py-3 bg-white cursor-pointer border border-gray-200 rounded-full font-semibold text-black hover:bg-black hover:text-white transition-all duration-300 shadow-sm">
             Contact Us
           </button>
         </div>
