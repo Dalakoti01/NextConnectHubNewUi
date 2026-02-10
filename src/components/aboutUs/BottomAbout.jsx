@@ -53,7 +53,7 @@ const BottomAbout = () => {
             Let’s discuss your idea and turn it into a powerful digital product.
           </p>
 
-          <Link href="/getInTouch">
+          <Link href="/contactUs">
             <button className="bg-black text-white px-10 py-4 rounded-full font-semibold hover:bg-gray-900 transition cursor-pointer">
               Get in Touch
             </button>

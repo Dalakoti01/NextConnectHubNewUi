@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, IndianRupee } from "lucide-react";
 
 const plans = [
   {
@@ -93,7 +93,7 @@ export default function PricingCards() {
 
                 <div className="flex items-baseline mb-4">
                   {plan.price !== "Custom" && (
-                    <span className="text-xl font-bold mr-1">$</span>
+                    <span className="text-xl font-bold mr-1"><IndianRupee/ ></span>
                   )}
                   <span className="text-4xl sm:text-5xl font-bold">
                     {plan.price}
@@ -157,8 +157,8 @@ export default function PricingCards() {
                     plan.isDark ? "text-gray-500" : "text-gray-400"
                   }`}
                 >
-                  Billed annually or $
-                  {plan.price === "Custom"
+                  Billed annually or  
+                  <IndianRupee size={14} className="inline mr-1" />{plan.price === "Custom"
                     ? "Call"
                     : parseInt(plan.price) + 10}{" "}
                   month-to-month

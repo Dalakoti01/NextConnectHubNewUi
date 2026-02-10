@@ -22,7 +22,6 @@ export default function HomePage() {
         <FAQ />
       </main>
 
-      <Footer />
     </div>
   );
 }

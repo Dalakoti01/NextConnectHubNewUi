@@ -78,7 +78,7 @@ export default function Hero() {
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-black rounded-full" />
               <span className="font-bold text-lg leading-tight">
-                Mobile <br /> FIRST
+                SEO <br /> Optimized
               </span>
             </div>
           </motion.div>

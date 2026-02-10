@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Kapil Verma",
+    name: "Kapil Ade",
     role: "Client",
     poster: "/kapilTestimonials.jpeg",
     youtubeId: "p8exHFHU_pc",

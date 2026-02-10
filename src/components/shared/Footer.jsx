@@ -1,10 +1,22 @@
 "use client";
 
 import { Play } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Footer() {
-  const router = useRouter()
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleContactClick = () => {
+    if (pathname === "/contactUs") {
+      // ✅ Already on Contact page → scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // ✅ Navigate to Contact page
+      router.push("/contactUs");
+    }
+  };
+
   return (
     <footer className="bg-black text-white pt-24 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,10 +30,17 @@ export default function Footer() {
             <p className="text-gray-400 mb-8">Let your business go online</p>
 
             <div className="flex space-x-4">
-              <button onClick={() => router.push("/contactUs")} className="h-12 px-8 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors">
+              <button
+                onClick={handleContactClick}
+                className="h-12 px-8 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition-colors cursor-pointer"
+              >
                 Get Started
               </button>
-              <button className="h-12 px-8 border border-white/20 rounded-full font-semibold hover:bg-white/10 transition-colors">
+
+              <button
+                onClick={handleContactClick}
+                className="h-12 px-8 border border-white/20 rounded-full font-semibold hover:bg-white/10 transition-colors cursor-pointer"
+              >
                 Learn More
               </button>
             </div>
@@ -81,20 +100,24 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-6">Contact us</h3>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li>contact@nextconnecthub.com</li>
+              <li>nextconnecthub@gmail.com</li>
               <li>+91 7895632801</li>
               <li className="pt-4 text-xs text-gray-500">
-                KHATRI & DALAKOTI SOLUTIONS PRIVATE LIMITED
+                K&D SOLUTIONS PRIVATE LIMITED
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2023 KHATRI & DALAKOTI SOLUTIONS PRIVATE LIMITED.</p>
+          <p>© 2023 K&D SOLUTIONS PRIVATE LIMITED.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="/termsandcondition" className="hover:text-white">Terms & Conditions</a>
-            <a href="/privacyPolicy" className="hover:text-white">Privacy Policy</a>
+            <a href="/termsandcondition" className="hover:text-white">
+              Terms & Conditions
+            </a>
+            <a href="/privacyPolicy" className="hover:text-white">
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>

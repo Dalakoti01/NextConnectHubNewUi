@@ -22,6 +22,23 @@ const ContactForm = ({ className }) => {
   };
 
   const handleSubmit = async () => {
+    // 🔴 FRONTEND VALIDATION (NEW)
+    if (!formData.fullName.trim()) {
+      return toast.error("Full name is required");
+    }
+    if (!formData.email.trim()) {
+      return toast.error("Email address is required");
+    }
+    if (!formData.phoneNumber) {
+      return toast.error("Phone number is required");
+    }
+    if (!formData.subject) {
+      return toast.error("Please select a service");
+    }
+    if (!formData.message.trim()) {
+      return toast.error("Message cannot be empty");
+    }
+
     try {
       setLoading(true);
       const res = await axios.post(

@@ -3,15 +3,13 @@
 import { motion } from "framer-motion";
 
 const clients = [
-  { name: "REALMS", logo: "REALMS" },
-  { name: "NETFLIX", logo: "NETFLIX" },
-  { name: "SONY", logo: "SONY" },
-  { name: "INK GAMES", logo: "INK GAMES" },
-  { name: "CURVE", logo: "CURVE" },
-  { name: "Discord", logo: "Discord" },
-  { name: "Google", logo: "Google" },
-  { name: "AUTODESK", logo: "AUTODESK" },
-  { name: "Sketchfab", logo: "Sketchfab" },
+  { name: "THE-DOCTORS-APP", logo: "TheDoctorsApp" },
+  { name: "RIVOR", logo: "RIVOR" },
+  { name: "AnyOneCanConnect", logo: "AnyOneCanConnect" },
+  { name: "BlogCraft", logo: "BlogCraft" },
+  { name: "Deshbhar-Exam", logo: "DeshbharExam" },
+  { name: "ManipalUniversity", logo: "OnlinesManipal" },
+  { name: "VaticanCreatives", logo: "VaticanCreatives" },
 ];
 
 export default function ClientLogos() {

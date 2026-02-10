@@ -12,7 +12,7 @@ export default function ProcessDiagram() {
           {/* Background Typography */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-10">
             <span className="text-[6rem] sm:text-[10rem] md:text-[16rem] lg:text-[20rem] font-bold text-black whitespace-nowrap leading-none">
-              Next Connect
+              UODDM Framework
             </span>
           </div>
 
@@ -27,7 +27,7 @@ export default function ProcessDiagram() {
               <div className="relative h-[380px] w-[240px] rounded-[2.5rem] border-2 border-black shadow-2xl rotate-[-5deg] overflow-hidden bg-white">
                 <Image
                   src="/mobileImage1.jpeg"
-                  alt="Mobile UI"
+                  alt="Understanding Phase"
                   fill
                   className="object-cover"
                   sizes="240px"
@@ -46,13 +46,13 @@ export default function ProcessDiagram() {
               <h3 className="text-2xl sm:text-3xl font-serif text-center mb-8">
                 Mobile First
                 <br />
-                Approach
+                Performance Driven
               </h3>
 
               <div className="relative h-[460px] w-[260px] sm:h-[500px] sm:w-[280px] rounded-[3rem] border-4 border-black shadow-2xl overflow-hidden bg-white">
                 <Image
                   src="/mobileImage2.jpeg"
-                  alt="App Screen"
+                  alt="Development Phase"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 260px, 280px"
@@ -74,7 +74,7 @@ export default function ProcessDiagram() {
               <div className="relative h-[380px] w-[240px] rounded-[2.5rem] border-2 border-black shadow-2xl rotate-[5deg] overflow-hidden bg-white">
                 <Image
                   src="/mobileImage3.jpeg"
-                  alt="App Preview"
+                  alt="Delivery Phase"
                   fill
                   className="object-cover"
                   sizes="240px"
@@ -90,9 +90,35 @@ export default function ProcessDiagram() {
           {/* Vertical Line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-black -translate-x-1/2 hidden md:block" />
 
-          {[1, 2, 3].map((step, index) => (
+          {[
+            {
+              title: "Understanding",
+              description:
+                "We start by understanding your business, services, and goals. This helps clarify what the website actually needs to do.",
+            },
+            {
+              title: "Optimise Solution",
+              description:
+                "Based on your needs, we define the right website structure, pages, and user flow. The focus stays on clarity and enquiries.",
+            },
+            {
+              title: "Development",
+              description:
+                "Once the plan is clear, we develop the website with clean design and smooth performance. Nothing unnecessary. Just what works.",
+            },
+            {
+              title: "Delivery of Website",
+              description:
+                "The website is reviewed, tested, and shared with you for final approval. Everything is verified before going live.",
+            },
+            {
+              title: "Maintenance",
+              description:
+                "After launch, we assist with basic updates and support so your website stays reliable over time.",
+            },
+          ].map((step, index) => (
             <div
-              key={step}
+              key={index}
               className={`flex flex-col md:flex-row items-center justify-between mb-16 sm:mb-24 ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
@@ -112,13 +138,10 @@ export default function ProcessDiagram() {
                   }`}
                 >
                   <h3 className="text-2xl sm:text-3xl font-serif mb-2">
-                    Get Started And
-                    <br />
-                    Follow
+                    {step.title}
                   </h3>
                   <p className="text-gray-500 text-sm max-w-xs">
-                    Write something here and then ask me back. This section
-                    explains how the process flows step by step.
+                    {step.description}
                   </p>
                 </div>
               </motion.div>

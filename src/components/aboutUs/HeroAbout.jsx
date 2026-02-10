@@ -22,22 +22,33 @@ const HeroAbout = () => {
 
           <div className="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-6">
             <p>
-              NEXTCONNECTHUB is the web development arm of KHATRI & DALAKOTI
-              SOLUTIONS PRIVATE LIMITED, founded in 2020 with a mission to provide
-              high-quality, affordable web development services.
+              NEXTCONNECTHUB is the web development arm of K&amp;D SOLUTIONS
+              PRIVATE LIMITED, founded in 2020 with a mission to deliver
+              high-quality, affordable, and result-driven web solutions.
             </p>
+
             <p>
-              What started as a partnership between two tech enthusiasts has
-              grown into a dedicated team of developers, designers, and digital
-              strategists.
+              Over the years, we have grown into a focused team of developers,
+              designers, and digital specialists who believe in building
+              practical, scalable, and performance-oriented digital products.
             </p>
+
             <p>
-              Our founders recognized a gap in the market for development
-              services that were technically excellent yet budget-friendly.
+              Our approach is rooted in understanding real business problems and
+              solving them through clean development, thoughtful design, and
+              reliable technology.
             </p>
+
             <p>
-              Today, we’ve delivered 100+ projects across industries, with
-              quality, transparency, and client satisfaction at our core.
+              We operate from our office in <strong>India</strong>, serving
+              clients across different regions with the same commitment to
+              quality, transparency, and long-term value.
+            </p>
+
+            <p>
+              Today, we’ve successfully delivered 100+ projects across multiple
+              industries, with client satisfaction and measurable outcomes at
+              the core of everything we do.
             </p>
           </div>
         </div>

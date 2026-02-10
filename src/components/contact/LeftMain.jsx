@@ -19,7 +19,7 @@ const LeftMain = () => {
               href="mailto:contactatsamarth@gmail.com"
               className="text-black hover:underline"
             >
-              contactatsamarth@gmail.com
+              nextconnecthub@gmail.com
             </a>
           </div>
         </div>
@@ -45,7 +45,7 @@ const LeftMain = () => {
           <div>
             <h3 className="font-semibold text-black mb-1">Company</h3>
             <p className="text-gray-600">
-              KHATRI & DALAKOTI SOLUTIONS PRIVATE LIMITED
+              K&D SOLUTIONS PRIVATE LIMITED 
             </p>
           </div>
         </div>
