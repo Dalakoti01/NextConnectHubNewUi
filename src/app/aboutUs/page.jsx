@@ -1,6 +1,5 @@
-import BottomAbout from '@/components/aboutUs/BottomAbout';
-import HeroAbout from '@/components/aboutUs/HeroAbout';
-import OurTeams from '@/components/aboutUs/OurTeams';
+
+import AboutPage from '@/components/aboutUsNew/AboutPage';
 import React from 'react'
 
 
@@ -40,9 +39,7 @@ const page = () => {
   
   return (
     <div>
-      <HeroAbout/>
-      <OurTeams/>
-      <BottomAbout/>
+      <AboutPage/ >
     </div>
   )
 }
