@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const clients = [
-  { name: "THE-DOCTORS-APP", logo: "TheDoctorsApp" },
+  // { name: "THE-DOCTORS-APP", logo: "TheDoctorsApp" },
   { name: "RIVOR", logo: "RIVOR" },
   { name: "AnyOneCanConnect", logo: "AnyOneCanConnect" },
   { name: "BlogCraft", logo: "BlogCraft" },

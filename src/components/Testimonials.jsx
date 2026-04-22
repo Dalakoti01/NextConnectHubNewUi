@@ -12,13 +12,13 @@ const testimonials = [
     poster: "/priyaTestimonials.jpeg",
     youtubeId: "f-gLiwtJ-J0",
   },
-  {
-    id: 2,
-    name: "Kapil Ade",
-    role: "Client",
-    poster: "/kapilTestimonials.jpeg",
-    youtubeId: "p8exHFHU_pc",
-  },
+  // {
+  //   id: 2,
+  //   name: "Kapil Ade",
+  //   role: "Client",
+  //   poster: "/kapilTestimonials.jpeg",
+  //   youtubeId: "p8exHFHU_pc",
+  // },
   {
     id: 3,
     name: "Shantanu Rao",
